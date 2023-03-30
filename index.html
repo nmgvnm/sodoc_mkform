@@ -1,37 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <!-- reset.css -->
+  <link rel="stylesheet" href="./common/reset.css">
+  <!-- style.css -->
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <title>불면증 증상 척도</title>
+
 </head>
 <body>
-
-    <div id="test">
-        <h1> Hello! Screenshot Me!</h1>
-    </div>
-    <button id="btn">screenshot</button>
+  <div class="container">
+    <header>
+      <h1>불면증 증상 척도(Insomnia Severity Index)</h1>
+      <div class="Pinfo">
+        <ul>
+          <li>날짜 : </li>
+          <li>성명 : </li>
+          <li>등록번호 : </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="title">
+        <h2>현재의 불면 증상 정도를 체크하세요</h2>
+        <ul>
+          <li>전혀 그렇지 않다</li>
+          <li>거의 그렇지 않다</li>
+          <li>가끔 그렇다</li>
+          <li>자주 그렇다</li>
+          <li>매일 그렇다</li>
+        </ul>
+      </div>
+      <div class="question1">
+        <h2>잠자리에 누운 후 잠드는데 30분 이상 걸린다</h2>
+        <ul>
+          <li><input type="radio" name="q1" value="0"></li>
+          <li><input type="radio" name="q1" value="1"></li>
+          <li><input type="radio" name="q1" value="2"></li>
+          <li><input type="radio" name="q1" value="3"></li>
+          <li><input type="radio" name="q1" value="4"></li>
+        </ul>
+      </div>
+    </main>
+    <article></article>
+    <footer></footer>
+  </div>
 </body>
-<script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script>
-<script>
-    window.onload = function () {
-        console.log("Window is loaded")
-        document.getElementById('btn').addEventListener("click", function () {
-            html2canvas(document.getElementById('test')).then(function (canvas) {
-                document.body.appendChild(canvas);
-                var imgdata = canvas.toDataURL("image/jpg");
-                var doc = new jspdf.jsPDF();
-                doc.addImage(imgdata, "JPG", 10, 10);
-                doc.save("sample.pdf");
-            });
-        })
-
-    }
-
-</script>
-
 </html>

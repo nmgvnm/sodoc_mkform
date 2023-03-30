@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        .cvs { border: 1px solid gray; }
+        </style>
+        <script type="text/javascript">
+        function drawLine(el) {
+            var cvs_w = el.offsetWidth;
+            var cvs_h = el.offsetHeight;
+            var ctx = el.getContext('2d');
+
+            ctx.beginPath();
+            ctx.moveTo(0, 0);
+            ctx.lineTo(0, 0);
+            // ctx.lineTo(cvs_w, cvs_h);
+            ctx.lineTo(Math.ceil(Math.random() * cvs_w), Math.ceil(Math.random() * cvs_h));
+            ctx.stroke();
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var canvases = document.getElementsByClassName('cvs');
+            for (var i = 0, i_len = canvases.length; i < i_len; i++) {
+                drawLine(canvases[i]);
+            }
+        });
+        </script>
+    </head>
+    <body>
+        <canvas class="cvs" id="canvas1"></canvas>
+        <canvas class="cvs" id="canvas2"></canvas>
+        <canvas class="cvs" id="canvas3"></canvas>
+        <canvas class="cvs" id="canvas100"></canvas>
+    </body>
+</html>
