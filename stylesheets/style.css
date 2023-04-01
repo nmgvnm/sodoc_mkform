@@ -1,8 +1,15 @@
 @charset "utf-8";
+/* common */
+
+
+
+
+
+
 /* header *****************************************************/
 header {
   width: 100%; height: 10vh;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 header h1 {
   font-size: 2rem;
@@ -12,7 +19,8 @@ header h1 {
 header .Pinfo {
 width: 50vw; height: 30px;
 margin: 0 auto;
-background-color: bisque;
+margin-top: 20px;
+/* background-color: bisque; */
 
 position: relative;
 }
@@ -28,21 +36,115 @@ header .Pinfo ul li {
 
 /* main *****************************************************/
 main {
-  width: 100%; height: 70vh;
-  background-color: cadetblue;
-}
-main .title {
-  display: flex;
-  font-size: 1.2rem;
-  justify-content: center;
+  width: 100%; height: 75vh;
+  /* background-color: cadetblue; */
+  position: relative;
   padding-top: 20px;
 }
-main .title h2 {padding-right: 20px;}
-main .title ul {
-  display: flex;
+main .main_wrapper {
+  width: 75%;
+  margin: 0 auto;
+  /* background-color: burlywood; */
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+main .title {
+  font-size: 1.1rem;
+  /* text-align: center; */
+  /* padding: 20px; */
+  display: grid;
+  height: 60px;
+  grid-template-columns: 1fr 1.6fr;
+  /* width: 80%; */
+  /* background-color: blue; */
+  border-bottom: solid 1px #ddd;
   text-align: center;
 }
-main .title ul li {width: 170px;}
-main .question1 {}
-main .question1 h2{}
-main .question1 ul{}
+main .title .title_item1 {
+  border-right: 1px solid #ddd;
+  position: relative;
+  /* background-color: aqua; */
+
+}
+main .title .title_item1 h2 {
+  /* padding-right: 20px; */
+  /* border-right: 1px solid #ddd; */
+  /* background-color: yellow; */
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+
+}
+main .title .title_item2 {
+  /* background-color: violet; */
+}
+main .title ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* background-color: tomato; */
+  height: 60px;
+}
+main .title ul li {
+  border-right: 1px solid #ddd;
+  position: relative;
+}
+main .title ul li:last-child {
+  border: none;
+}
+main .title ul li span {
+  /* background-color: brown; */
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+main .question {
+  font-size: 1.2rem;
+  /* padding: 20px; */
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  height: 60px;
+
+  border-bottom: solid 1px #ddd;
+}
+main .question h2{
+  border-right: 1px solid #ddd;
+  /* background-color: aqua; */
+  padding-left: 20px;
+  display: flex; align-items: center; 
+}
+main .question ul{
+  display: flex;
+  text-align: center;
+  /* background-color: blanchedalmond; */
+  display: flex; align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+main .question ul li {
+  /* background-color: blue; */
+
+}
+/* [type="radio"] {
+  vertical-align: middle;
+  appearance: none;
+  border: max(2px, 0.1em) solid gray;
+  border-radius: 50%;
+  width: 1.25em;
+  height: 1.25em;
+  transition: border 0.5s ease-in-out;
+}
+[type="radio"]:checked {
+  border: 0.4em solid tomato;
+}
+[type="radio"]:focus-visible {
+  outline-offset: max(2px, 0.1em);
+  outline: max(2px, 0.1em) dotted tomato;
+}
+[type="radio"]:hover {
+  box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+  cursor: pointer;
+} */
+

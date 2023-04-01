@@ -13,40 +13,108 @@
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>불면증 증상 척도(Insomnia Severity Index)</h1>
-      <div class="Pinfo">
-        <ul>
-          <li>날짜 : </li>
-          <li>성명 : </li>
-          <li>등록번호 : </li>
-        </ul>
-      </div>
-    </header>
-    <main>
-      <div class="title">
-        <h2>현재의 불면 증상 정도를 체크하세요</h2>
-        <ul>
-          <li>전혀 그렇지 않다</li>
-          <li>거의 그렇지 않다</li>
-          <li>가끔 그렇다</li>
-          <li>자주 그렇다</li>
-          <li>매일 그렇다</li>
-        </ul>
-      </div>
-      <div class="question1">
-        <h2>잠자리에 누운 후 잠드는데 30분 이상 걸린다</h2>
-        <ul>
-          <li><input type="radio" name="q1" value="0"></li>
-          <li><input type="radio" name="q1" value="1"></li>
-          <li><input type="radio" name="q1" value="2"></li>
-          <li><input type="radio" name="q1" value="3"></li>
-          <li><input type="radio" name="q1" value="4"></li>
-        </ul>
-      </div>
-    </main>
-    <article></article>
-    <footer></footer>
+    <div class="wrapper">
+      <header>
+        <h1>불면증 증상 척도(Insomnia Severity Index)</h1>
+        <div class="Pinfo">
+          <ul>
+            <li>날짜 : </li>
+            <li>성명 : </li>
+            <li>등록번호 : </li>
+          </ul>
+        </div>
+      </header>
+      <main>
+        <div class="main_wrapper">
+          <div class="title">
+            <div class="title_item1">
+              <h2>현재의 불면 증상 정도를 체크하세요</h2>
+            </div>
+            <div class="title_item2">
+              <ul>
+                <li><span>전혀 그렇지<br /> 않다</span></li>
+                <li><span>거의 그렇지<br /> 않다</span></li>
+                <li><span>가끔 그렇다</span></li>
+                <li><span>자주 그렇다</span></li>
+                <li><span>매일 그렇다</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="question q-1">
+            <h2>잠자리에 누운 후 잠드는데 30분 이상 걸린다.</h2>
+            <ul>
+              <li><input type="radio" name="q1" value="0"></li>
+              <li><input type="radio" name="q1" value="1"></li>
+              <li><input type="radio" name="q1" value="2"></li>
+              <li><input type="radio" name="q1" value="3"></li>
+              <li><input type="radio" name="q1" value="4"></li>
+            </ul>
+          </div>
+          <div class="question q-2">
+            <h2>잠이 들고 얼마 지나지 않아 깬다.<br /> 다시 잠들기 힘들다.</h2>
+            <ul>
+              <li><input type="radio" name="q2" value="0"></li>
+              <li><input type="radio" name="q2" value="1"></li>
+              <li><input type="radio" name="q2" value="2"></li>
+              <li><input type="radio" name="q2" value="3"></li>
+              <li><input type="radio" name="q2" value="4"></li>
+            </ul>
+          </div>
+          <div class="question q-3">
+            <h2>새벽에 너무 일찍 깬다.<br /> 다시 잠들기 힘들다.</h2>
+            <ul>
+              <li><input type="radio" name="q3" value="0"></li>
+              <li><input type="radio" name="q3" value="1"></li>
+              <li><input type="radio" name="q3" value="2"></li>
+              <li><input type="radio" name="q3" value="3"></li>
+              <li><input type="radio" name="q3" value="4"></li>
+            </ul>
+          </div>
+          <div class="question q-4">
+            <h2>수면 상태에 만족하지 않는다.</h2>
+            <ul>
+              <li><input type="radio" name="q4" value="0"></li>
+              <li><input type="radio" name="q4" value="1"></li>
+              <li><input type="radio" name="q4" value="2"></li>
+              <li><input type="radio" name="q4" value="3"></li>
+              <li><input type="radio" name="q4" value="4"></li>
+            </ul>
+          </div>
+          <div class="question q-5">
+            <h2>수면 문제로 일상 생활에 지장을 받는다.</h2>
+            <ul>
+              <li><input type="radio" name="q5" value="0"></li>
+              <li><input type="radio" name="q5" value="1"></li>
+              <li><input type="radio" name="q5" value="2"></li>
+              <li><input type="radio" name="q5" value="3"></li>
+              <li><input type="radio" name="q5" value="4"></li>
+            </ul>
+          </div>
+          <div class="question q-6">
+            <h2>수면 문제로 다른 사람들이 걱정한다.</h2>
+            <ul>
+              <li><input type="radio" name="q6" value="0"></li>
+              <li><input type="radio" name="q6" value="1"></li>
+              <li><input type="radio" name="q6" value="2"></li>
+              <li><input type="radio" name="q6" value="3"></li>
+              <li><input type="radio" name="q6" value="4"></li>
+            </ul>
+          </div>
+          <div class="question q-7">
+            <h2>수면상태에 대해 걱정한다.</h2>
+            <ul>
+              <li><input type="radio" name="q7" value="0"></li>
+              <li><input type="radio" name="q7" value="1"></li>
+              <li><input type="radio" name="q7" value="2"></li>
+              <li><input type="radio" name="q7" value="3"></li>
+              <li><input type="radio" name="q7" value="4"></li>
+            </ul>
+          </div>
+        </div>
+      </main>
+      <article></article>
+      <footer></footer>
+    </div>
   </div>
 </body>
 </html>
