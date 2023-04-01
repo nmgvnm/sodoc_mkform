@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- reset.css -->
   <link rel="stylesheet" href="./common/reset.css">
+  <!-- font.css -->
+  <link rel="stylesheet" href="./stylesheets/font.css">
   <!-- style.css -->
   <link rel="stylesheet" href="./stylesheets/style.css">
   <title>불면증 증상 척도</title>
@@ -42,13 +44,15 @@
           </div>
           <div class="question q-1">
             <h2>잠자리에 누운 후 잠드는데 30분 이상 걸린다.</h2>
-            <ul>
-              <li><input type="radio" name="q1" value="0"></li>
-              <li><input type="radio" name="q1" value="1"></li>
-              <li><input type="radio" name="q1" value="2"></li>
-              <li><input type="radio" name="q1" value="3"></li>
-              <li><input type="radio" name="q1" value="4"></li>
-            </ul>
+            <form action="#">
+              <ul>
+                <li><input type="radio" name="q1" value="0"></li>
+                <li><input type="radio" name="q1" value="1"></li>
+                <li><input type="radio" name="q1" value="2"></li>
+                <li><input type="radio" name="q1" value="3"></li>
+                <li><input type="radio" name="q1" value="4"></li>
+              </ul>
+            </form>
           </div>
           <div class="question q-2">
             <h2>잠이 들고 얼마 지나지 않아 깬다.<br /> 다시 잠들기 힘들다.</h2>
@@ -112,9 +116,18 @@
           </div>
         </div>
       </main>
-      <article></article>
+      <article>
+        <input type="button" value="합계" onclick="questionSum">
+      </article>
       <footer></footer>
     </div>
   </div>
 </body>
+<script>
+  function questionSum() {
+    
+  }
+  const radio = document.getElementsByTagName('input').value;
+  console.log();
+</script>
 </html>
