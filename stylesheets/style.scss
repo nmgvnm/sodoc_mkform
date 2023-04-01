@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* common */
+/* header *****************************************************/
+/* main *****************************************************/
+/* [type="radio"] {
+  vertical-align: middle;
+  appearance: none;
+  border: max(2px, 0.1em) solid gray;
+  border-radius: 50%;
+  width: 1.25em;
+  height: 1.25em;
+  transition: border 0.5s ease-in-out;
+}
+[type="radio"]:checked {
+  border: 0.4em solid tomato;
+}
+[type="radio"]:focus-visible {
+  outline-offset: max(2px, 0.1em);
+  outline: max(2px, 0.1em) dotted tomato;
+}
+[type="radio"]:hover {
+  box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+  cursor: pointer;
+} */
+ * {
+  font-family: 'NanumBarunGothic', sans-serif;
+  line-height: 1.2;
+}
+header {
+	width: 100%;
+	height: 10vh;
+	h1 {
+		font-size: 2rem;
+		text-align: center;
+		padding-top: 20px;
+	}
+	.Pinfo {
+		width: 50vw;
+		height: 30px;
+		margin: 0 auto;
+		margin-top: 20px;
+		position: relative;
+		ul {
+			position: absolute;
+			display: flex;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			li {
+				width: 200px;
+			}
+		}
+	}
+}
+main {
+	width: 100%;
+	height: 75vh;
+	position: relative;
+	padding-top: 20px;
+	.main_wrapper {
+		width: 75%;
+		margin: 0 auto;
+		border: 2px solid #ddd;
+		border-radius: 20px;
+		margin-top: 10px;
+	}
+	.title {
+		font-size: 1.1rem;
+		display: grid;
+		height: 60px;
+		grid-template-columns: 1fr 1.6fr;
+		border-bottom: solid 1px #ddd;
+		text-align: center;
+		.title_item1 {
+			border-right: 1px solid #ddd;
+			position: relative;
+			h2 {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				white-space: nowrap;
+			}
+		}
+		ul {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			height: 60px;
+			li {
+				border-right: 1px solid #ddd;
+				position: relative;
+				&:last-child {
+					border: none;
+				}
+				span {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+	.question {
+		font-size: 1.0417vw;
+		display: grid;
+		grid-template-columns: 1fr 1.6fr;
+		height: 60px;
+		border-bottom: solid 1px #ddd;
+    &:last-child {
+      border: none;
+    }
+		h2 {
+			border-right: 1px solid #ddd;
+			padding-left: 20px;
+			display: flex;
+			align-items: center;
+		}
+		ul {
+			display: flex;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+		}
+	}
+}
