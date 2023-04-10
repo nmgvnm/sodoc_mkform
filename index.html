@@ -39,8 +39,8 @@
             </div>
             <div class="title_item2">
               <ul>
-                <li><span>전혀 그렇지<br /> 않다</span></li>
-                <li><span>거의 그렇지<br /> 않다</span></li>
+                <li><span>전혀 그렇지<br> 않다</span></li>
+                <li><span>거의 그렇지<br> 않다</span></li>
                 <li><span>가끔 그렇다</span></li>
                 <li><span>자주 그렇다</span></li>
                 <li><span>매일 그렇다</span></li>
@@ -49,7 +49,7 @@
           </div>
           <div class="question q-1">
             <h2>잠자리에 누운 후 잠드는데 30분 이상 걸린다.</h2>
-              <ul class=>
+              <ul>
                 <li><input type="radio" name="q1" value="0"></li>
                 <li><input type="radio" name="q1" value="1"></li>
                 <li><input type="radio" name="q1" value="2"></li>
@@ -58,7 +58,7 @@
               </ul>
           </div>
           <div class="question q-2">
-            <h2>잠이 들고 얼마 지나지 않아 깬다.<br /> 다시 잠들기 힘들다.</h2>
+            <h2>잠이 들고 얼마 지나지 않아 깬다.<br> 다시 잠들기 힘들다.</h2>
             <ul class="Q">
               <li><input type="radio" name="q2" value="0"></li>
               <li><input type="radio" name="q2" value="1"></li>
@@ -68,7 +68,7 @@
             </ul>
           </div>
           <div class="question q-3">
-            <h2>새벽에 너무 일찍 깬다.<br /> 다시 잠들기 힘들다.</h2>
+            <h2>새벽에 너무 일찍 깬다.<br> 다시 잠들기 힘들다.</h2>
             <ul>
               <li><input type="radio" name="q3" value="0"></li>
               <li><input type="radio" name="q3" value="1"></li>
@@ -129,7 +129,7 @@
               <ul>
                 <li id="sleepQuestion_1">
                   1) 잠자리에 누운시간 ~ 잠자리에서 나온 시간 : 
-                  <select name="time" id="time">
+                  <select name="time">
                     <option value="선택">시간</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -156,9 +156,9 @@
                     <option value="23">23</option>
                     <option value="24">24</option>
                   </select>
-                  <label for="inputState">시</label>
+                  <label>시</label>
 
-                  <select name="time" id="time">
+                  <select name="time">
                     <option value="선택">분</option>
                     <option value="0">00</option>
                     <option value="10">10</option>
@@ -172,9 +172,9 @@
                     <option value="50">50</option>
                     <option value="55">55</option>
                   </select>
-                  <label for="inputState">분</label>
+                  <label>분</label>
                   ~
-                  <select name="time" id="time">
+                  <select name="time">
                     <option value="선택">시간</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -201,9 +201,9 @@
                     <option value="23">23</option>
                     <option value="24">24</option>
                   </select>
-                  <label for="inputState">시</label>
+                  <label>시</label>
 
-                  <select name="time" id="time">
+                  <select name="time">
                     <option value="선택">분</option>
                     <option value="0">00</option>
                     <option value="10">10</option>
@@ -217,22 +217,107 @@
                     <option value="50">50</option>
                     <option value="55">55</option>
                   </select>
-                  <label for="inputState">분</label>
+                  <label>분</label>
                   <div class="sumTime">
                     ( 시간 분)
+                  </div>
+                </li>
+                <li>
+                  2) 총 수면 시간 : 
+                  <select name="time">
+                    <option value="선택">시간</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                  </select>
+                  <label>시간</label>
+                </li>
+                <li>
+                  3) 잠들기까지 걸리는 시간 : 
+                  <select name="time">
+                    <option value="선택">시간</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                  </select>
+                  <label>시</label>
+
+                  <select name="time">
+                    <option value="선택">분</option>
+                    <option value="0">00</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                    <option value="35">35</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+                    <option value="50">50</option>
+                    <option value="55">55</option>
+                  </select>
+                  <label>분</label>
+                </li>
+                <li>
+                  4) 자는 도중 깨는 횟수 : 
+                  <label><input type="number"> 회 </label>
+                </li>
+                <li><p>5) 기타 양상 :</p>
+                  <textarea rows="3" cols=20 wrap="hard" placeholder="기타증상을 입력해주세요"></textarea>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <article>
-
+      <!-- <article> -->
         <!-- <input type="button" value="합계" onclick="questionSum">
         <div class="form-group col-md-6">
         <label for="inputEmail4">Email</label>
         <input type="email" class="form-control" id="inputEmail4" placeholder="Email"> -->
-      </article>
+      <!-- </article> -->
       <footer></footer>
     </div>
   </div>
