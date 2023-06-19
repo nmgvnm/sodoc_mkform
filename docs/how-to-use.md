@@ -8,8 +8,8 @@
 <!-- or -->
 <script src="/dist/RTCMultiConnection.min.js"></script>
 
-<!-- personal Link -->
-<script src="https://muazkhan.com:9001/dist/RTCMultiConnection.min.js"></script>
+<!-- Heroku Link -->
+<script src="https://rtcmulticonnection.herokuapp.com/dist/RTCMultiConnection.min.js"></script>
 
 <!-- or specific version -->
 <script src="https://github.com/muaz-khan/RTCMultiConnection/releases/download/3.4.7/RTCMultiConnection.js"></script>
@@ -38,7 +38,7 @@ If you're sharing files, you also need to link:
 Use socket.io:
 
 ```html
-<script src="https://muazkhan.com:9001/socket.io/socket.io.js"></script>
+<script src="https://rtcmulticonnection.herokuapp.com/socket.io/socket.io.js"></script>
 ```
 
 ## Set different socket URL
@@ -68,7 +68,7 @@ connection.socketMessageEvent = 'unique-message';
 
 ```json
 {
-  "socketURL": "https://muazkhan.com:9001/",
+  "socketURL": "https://rtcmulticonnection.herokuapp.com:443/",
   "socketMessageEvent": "RTCMultiConnection-Message"
 }
 ```
@@ -76,7 +76,7 @@ connection.socketMessageEvent = 'unique-message';
 Or:
 
 ```javascript
-connection.socketURL = 'https://muazkhan.com:9001/';
+connection.socketURL = 'https://rtcmulticonnection.herokuapp.com:443/';
 ```
 
 Here is a demo explaining how to use above `socketURL`:

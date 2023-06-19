@@ -141,13 +141,13 @@ connection.iceServers = [{
 }];
 
 // maximum two users are allowed to join single room
-connection.maxParticipantsAllowed = 2;
+connection.maxParticipantsAllowed = 40;
 
 // by default, socket.io server is assumed to be deployed on your own URL
 connection.socketURL = '/';
 
 // comment-out below line if you do not have your own socket.io server
-// connection.socketURL = 'https://muazkhan.com:9001/';
+// connection.socketURL = 'https://rtcmulticonnection.herokuapp.com:443/';
 
 connection.socketMessageEvent = 'one-to-one-demo';
 

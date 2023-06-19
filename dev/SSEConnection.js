@@ -1,5 +1,5 @@
 // SSEConnection.js
-var sseDirPath = 'https://muazkh.com/SSE/';
+var sseDirPath = 'https://webrtcweb.com/SSE/';
 
 function SSEConnection(connection, connectCallback) {
     if (connection.socketURL && connection.socketURL !== '/') {

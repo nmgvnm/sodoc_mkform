@@ -1,10 +1,31 @@
 // http://127.0.0.1:9001
 // http://localhost:9001
-
 const fs = require('fs');
 const path = require('path');
 const url = require('url');
 var httpServer = require('http');
+var requestip = require('request-ip');
+const winston = require('winston');
+require('winston-daily-rotate-file');
+require('date-utils');
+
+const logger = winston.createLogger({
+    level: 'debug', 
+    transports: [
+        new winston.transports.DailyRotateFile({
+            filename : 'logs/access_log', 
+            zippedArchive: true, 
+            format: winston.format.printf(
+                info => `${new Date().toFormat('YYYY-MM-DD HH24:MI:SS')} [${info.level.toUpperCase()}] - ${info.message}`)
+        }),
+        new winston.transports.Console({
+            format: winston.format.printf(
+                info => `${new Date().toFormat('YYYY-MM-DD HH24:MI:SS')} [${info.level.toUpperCase()}] - ${info.message}`)
+        })
+    ]
+});
+ 
+module.exports = logger;
 
 const ioServer = require('socket.io');
 const RTCMultiConnectionServer = require('rtcmulticonnection-server');
@@ -37,6 +58,9 @@ if(isUseHTTPs === false) {
 function serverHandler(request, response) {
     // to make sure we always get valid info from json file
     // even if external codes are overriding it
+
+//console.log(requestip.getClientIp(request));
+    logger.debug(requestip.getClientIp(request));
     config = getValuesFromConfigJson(jsonPath);
     config = getBashParameters(config, BASH_COLORS_HELPER);
 
@@ -167,7 +191,7 @@ function serverHandler(request, response) {
                 } else if (filename.indexOf(resolveURL('/demos')) !== -1) {
                     filename = filename.replace(resolveURL('/demos/'), '');
                     filename = filename.replace(resolveURL('/demos'), '');
-                    filename += resolveURL('/demos/index.html');
+                    filename += resolveURL('/demos/dashboard/index.html');
                 } else {
                     filename += resolveURL(config.homePage);
                 }
@@ -226,9 +250,9 @@ if (isUseHTTPs) {
     // See how to use a valid certificate:
     // https://github.com/muaz-khan/WebRTC-Experiment/issues/62
     var options = {
-        key: null,
-        cert: null,
-        ca: null
+        key: fs.readFileSync('./sotalk-key.pem'),
+        cert: fs.readFileSync('./sotalk-crt.pem'),
+        ca: fs.readFileSync('./sotalk-ca.pem')
     };
 
     var pfx = false;
